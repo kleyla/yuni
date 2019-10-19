@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import { View, Button, StyleSheet, Image, Text } from "react-native";
-import { Container, Tab, Tabs, TabHeading, Thumbnail } from "native-base";
+import {
+  Content,
+  Container,
+  Tab,
+  Tabs,
+  TabHeading,
+  Thumbnail
+} from "native-base";
 import Icon from "react-native-vector-icons/Ionicons";
 
 import Muro from "../Tienda/MuroTienda";
@@ -13,51 +20,55 @@ export default class Tienda extends Component {
     const coments = 62;
 
     return (
-      <View style={styles.container}>
-        {/* Caja de tienda */}
-        <View style={styles.artistBox}>
-          <Image
-            style={styles.image}
-            source={require("./../../assets/images/people/jose.jpg")}
-          />
-          <View style={styles.info}>
-            <Text style={styles.name}>{name}</Text>
-            <View style={styles.row}>
-              <View style={styles.iconContainer}>
-                <Icon name="ios-heart-empty" size={30} color="gray" />
-                <Text style={styles.count}>{likes}</Text>
-              </View>
-              <View style={styles.iconContainer}>
-                <Icon name="ios-checkmark-circle" size={30} color="gray" />
-                <Text style={styles.count}>{coments}</Text>
+      <Content>
+        <View style={styles.container}>
+          {/* Caja de tienda */}
+          <View style={styles.artistBox}>
+            <Image
+              style={styles.image}
+              source={require("./../../assets/images/people/jose.jpg")}
+            />
+            <View style={styles.info}>
+              <Text style={styles.name}>{name}</Text>
+              <Text>Soy..</Text>
+              <View style={styles.row}>
+                <View style={styles.iconContainer}>
+                  <Icon name="ios-heart-empty" size={30} color="gray" />
+                  <Text style={styles.count}>{likes}</Text>
+                </View>
+                <View style={styles.iconContainer}>
+                  <Icon name="ios-checkmark-circle" size={30} color="gray" />
+                  <Text style={styles.count}>{coments}</Text>
+                </View>
               </View>
             </View>
           </View>
-        </View>
+          <Productos />
 
-        {/* Productos */}
-        <Tabs>
+          {/* TABS */}
+          {/* <Tabs>
           <Tab
-            heading={
-              <TabHeading style={styles.tab}>
-                <Icon name="ios-heart-empty" />
-                <Text>Mi Muro</Text>
-              </TabHeading>
-            }
+          heading={
+            <TabHeading style={styles.tab}>
+            <Icon name="ios-heart-empty" />
+            <Text>Mi Muro</Text>
+            </TabHeading>
+          }
           >
-            <Muro />
+          <Muro />
           </Tab>
           <Tab
-            heading={
-              <TabHeading style={styles.tab}>
-                <Text>Productos</Text>
-              </TabHeading>
-            }
+          heading={
+            <TabHeading style={styles.tab}>
+            <Text>Productos</Text>
+            </TabHeading>
+          }
           >
-            <Productos />
+          <Productos />
           </Tab>
-        </Tabs>
-      </View>
+        </Tabs> */}
+        </View>
+      </Content>
     );
   }
 }

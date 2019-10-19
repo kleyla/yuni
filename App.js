@@ -16,13 +16,15 @@ import Home from './src/View/screens/Home'
 import Product from './src/View/screens/Product'
 import Carousel from './src/View/screens/Carousel'
 import Login from './src/View/screens/Login'
+import Settings from './src/View/screens/Usuario/Settings'
 
 const AppNavigator = createStackNavigator(
   {
     // Welcome: { screen: Welcome },
     // SignUp: { screen: SignUp },
-    Tienda: { screen: Tienda },
+    Settings: { screen: Settings },
     Perfil: { screen: Perfil },
+    Tienda: { screen: Tienda },
     Login: { screen: Login },
     Home: { screen: Home },
     Product: { screen: Product },

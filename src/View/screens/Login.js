@@ -16,6 +16,8 @@ import Logo from './../assets/images/ecom2.png';
 import Icon from 'react-native-vector-icons/Feather';
 
 import {Consumer} from './../../Model/VarGlobales';
+import * as firebase from "firebase/app";
+
 
 // import {HeaderGral} from './../components/Auxiliares';
 // import { TextInput } from 'react-native-gesture-handler';

@@ -18,7 +18,7 @@ import { Content } from "native-base";
 
 // USAR DIMENSIONS PARA QUE HAYA DOS PRODUCTOS POR CADA FILA
 
-console.disableYellowBox = true
+// console.disableYellowBox = true
 export default class Product extends Component {
   
 
