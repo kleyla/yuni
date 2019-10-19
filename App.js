@@ -15,7 +15,9 @@ const AppNavigator =createSwitchNavigator(
   {
     AuthLoading: WelcomeStack,
     App: TabNavigator,
-    
+
+
+
   },
   {
     initialRouteName: 'AuthLoading',

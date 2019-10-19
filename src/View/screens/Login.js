@@ -14,10 +14,15 @@ import {
 import bgImage from './../assets/images/Hoja-en-blanco.png';
 import Logo from './../assets/images/ecom2.png';
 import Icon from 'react-native-vector-icons/Feather';
+
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import {Consumer} from '../../Model/VarGlobales';
 import SignIn from './SignIn'
+
+import {Consumer} from './../../Model/VarGlobales';
+import * as firebase from "firebase/app";
+
 
 // import {HeaderGral} from './../components/Auxiliares';
 // import { TextInput } from 'react-native-gesture-handler';

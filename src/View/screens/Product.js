@@ -18,8 +18,10 @@ import { Content } from "native-base";
 import { withNavigation } from 'react-navigation';
 // USAR DIMENSIONS PARA QUE HAYA DOS PRODUCTOS POR CADA FILA
 
+
 console.disableYellowBox = true
 class Product extends Component {
+
   
 
   constructor() {
