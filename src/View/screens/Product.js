@@ -15,11 +15,11 @@ import { data } from "./../constants";
 import Comentario from "./../components/Comentario";
 import ProductBox from "./../components/ProductBox";
 import { Content } from "native-base";
-
+import { withNavigation } from 'react-navigation';
 // USAR DIMENSIONS PARA QUE HAYA DOS PRODUCTOS POR CADA FILA
 
 console.disableYellowBox = true
-export default class Product extends Component {
+class Product extends Component {
   
 
   constructor() {
@@ -60,6 +60,8 @@ export default class Product extends Component {
     );
   }
 }
+
+export default withNavigation(Product)
 
 const styles = StyleSheet.create({
   container: {

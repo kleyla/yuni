@@ -14,14 +14,19 @@ import {
 import bgImage from './../assets/images/Hoja-en-blanco.png';
 import Logo from './../assets/images/ecom2.png';
 import Icon from 'react-native-vector-icons/Feather';
-
-import {Consumer} from './../../Model/VarGlobales';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import {Consumer} from '../../Model/VarGlobales';
+import SignIn from './SignIn'
 
 // import {HeaderGral} from './../components/Auxiliares';
 // import { TextInput } from 'react-native-gesture-handler';
 
 const {width: WIDTH} = Dimensions.get('window');
-export default class Login2 extends Component {
+ class LogIn extends Component {
+  static navigationOptions = {
+    header: null,
+  };
   constructor() {
     super();
     this.state = {
@@ -41,7 +46,7 @@ export default class Login2 extends Component {
           <ImageBackground source={bgImage} style={styles.backgroundContainer}>
             <View style={styles.logoContainer}>
               <Image source={Logo} style={styles.logo} />
-              <Text style={styles.logoText}>LOGIN</Text>
+              <Text style={styles.logoText}>YuniXpress</Text>
             </View>
             <View style={styles.inputContainer}>
               <Icon
@@ -98,30 +103,33 @@ export default class Login2 extends Component {
                 //   this.state.pass,
                 // );
               }}>
-              <Text style={styles.text}>Login</Text>
+              <Text style={styles.text}>Inicia Sesión</Text>
             </TouchableOpacity>
-            <Text style={styles.textReg}>No tienes una cuenta?</Text>
+            <Text style={styles.textReg}>¿No tienes una cuenta?</Text>
             <TouchableOpacity
               style={styles.btnLogin}
               onPress={() => {
-                this.props.navigation.navigate('Register', {});
+                this.props.navigation.navigate('SignIn', {});
               }}>
               <Text style={styles.text}>Registrate</Text>
             </TouchableOpacity>
-            <Text style={styles.textReg}>Ejemplos rapidos</Text>
-            <TouchableOpacity
-              style={styles.btnLogin}
-              onPress={() => {
-                this.props.navigation.navigate('Home', {});
-              }}>
-              <Text style={styles.text}>Registrate</Text>
-            </TouchableOpacity>
+            
+          
           </ImageBackground>
         )}
       </Consumer>
     );
   }
 }
+
+const WelcomeStack = createStackNavigator({
+  LogIn: LogIn,
+  SignIn: SignIn
+
+});
+
+export default createAppContainer(WelcomeStack);
+
 
 const styles = StyleSheet.create({
   backgroundContainer: {
@@ -174,12 +182,12 @@ const styles = StyleSheet.create({
     width: WIDTH - 55,
     height: 45,
     borderRadius: 25,
-    backgroundColor: '#0096ce',
+    backgroundColor: 'blue',
     justifyContent: 'center',
     marginTop: 20,
   },
   text: {
-    color: 'rgba(255, 255, 255, 0.7)',
+    color: 'white',
     fontSize: 16,
     textAlign: 'center',
   },
