@@ -1,0 +1,23 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAnDBygsDbFwaD1lpIwlUWieeIQPP6NU-g",
+    authDomain: "yuniexpress.firebaseapp.com",
+    databaseURL: "https://yuniexpress.firebaseio.com",
+    projectId: "yuniexpress",
+    storageBucket: "yuniexpress.appspot.com",
+    messagingSenderId: "1010914872820",
+    appId: "1:1010914872820:web:0d1c0ca625563c04ab3da1",
+    measurementId: "G-B088R6Y4R1"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
