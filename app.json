@@ -25,6 +25,12 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.gruposw.yuniexpress",
+      "config": {
+        "googleMaps": { "apiKey": "AIzaSyCIw8uSw-xfgm_gB049CnGThd1kVby0F-s" }
+     }
     }
   }
 }
