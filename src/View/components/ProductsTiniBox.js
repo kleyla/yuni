@@ -17,25 +17,31 @@ import {
   Body,
   Button
 } from "native-base";
-
+import { withNavigation } from 'react-navigation';
 // USAR DIMENSIONS PARA QUE HAYA DOS PRODUCTOS POR CADA FILA
 
-export default class ProductsTiniBox extends Component {
+ class ProductsTiniBox extends Component {
   render() {
     const { id, name, description, tags, images } = this.props.product;
     const nombretienda = "Tienda lala";
+    const { navigate } = this.props.navigation;
     return (
       <Card>
-        <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigate('Tienda',{name})}>
           <CardItem>
+        
             <Left>
+            <TouchableOpacity onPress={() => navigate('Tienda',{name})}>
               <Thumbnail source={images[0]} />
+            </TouchableOpacity>
               <Body>
                 <Text note>{name}</Text>
               </Body>
+             
             </Left>
+        
           </CardItem>
-        </TouchableOpacity>
+       
         <TouchableOpacity style={styles.description}>
           <View>
             <Text>Monedas habilitadas OFERTA</Text>
@@ -61,10 +67,13 @@ export default class ProductsTiniBox extends Component {
             <Text> Compartir</Text>
           </TouchableOpacity>
         </CardItem>
+        </TouchableOpacity>
       </Card>
     );
   }
 }
+
+export default withNavigation(ProductsTiniBox);
 
 const styles = StyleSheet.create({
   description: {

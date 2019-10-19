@@ -12,7 +12,11 @@ import { CheckBox, Item, Picker } from "native-base";
 import Icon from "react-native-vector-icons/AntDesign";
 import { theme } from "../../constants";
 
-export default class Carrito extends Component {
+export default class WishList extends Component {
+  static navigationOptions = {
+    title: 'Lisat de Deseos',
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -30,7 +34,7 @@ export default class Carrito extends Component {
     const precio = 5;
     const cantidad = 62;
     const descripcion = "Este es un produccto que se trata de losjnckc";
-
+    
     return (
       <View style={styles.container}>
         <View style={styles.header}>
@@ -57,6 +61,7 @@ export default class Carrito extends Component {
           </View>
         </TouchableOpacity>
       </View>
+     
     );
   }
 }

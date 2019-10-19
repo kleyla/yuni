@@ -14,7 +14,7 @@ const Usuario = {
       headers: {'Content-Type': 'application/json'},
       method: 'post',
     })
-      .then(response => response.json())
+      .then(responde => response.json())
       .then(responseJson => {
         if (responseJson.length === 0) {
           Alert.alert('USUARIO INGRESADO INCORRECTO');
