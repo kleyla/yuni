@@ -112,6 +112,6 @@ const styles = StyleSheet.create({
   //TAB ESTILOS
   tab: {
   
-    backgroundColor: "blue"
+    backgroundColor: "rgb(217, 53, 41)"
   }
 });

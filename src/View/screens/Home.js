@@ -38,7 +38,7 @@ class Home extends Component {
     title: 'Inicio',
     headerRight: (
       <HeaderButtons HeaderButtonComponent={IoniconsHeaderButton}>
-        <Item title="shoppingcart" iconName="ios-cart" onPress={() => navigation.navigate('Carrito')} />
+        <Item style={styles.icon} title="shoppingcart" iconName="ios-cart" onPress={() => navigation.navigate('Carrito')} />
       </HeaderButtons>
     ),
     };
@@ -137,7 +137,7 @@ const TabNavigator = createBottomTabNavigator({
     },
   }),
   tabBarOptions: {
-    activeTintColor: 'blue',
+    activeTintColor: 'rgb(217, 53, 41)',
     inactiveTintColor: 'gray',
   }}
   );
@@ -154,7 +154,8 @@ const styles = StyleSheet.create({
   },
   icon: {
     fontSize: 20,
-    color: 'black',
+    tintColor: 'rgb(217, 53, 41)',
+    color: 'rgb(217, 53, 41)',
   },
   artistBox: {
     backgroundColor: "white",

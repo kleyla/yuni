@@ -71,8 +71,8 @@ export class HeaderSearch extends Component {
   render() {
     return (
      
-          <Header>
-            <Body>
+          <Header style={styles.body}>
+            <Body style={styles.body}>
               <View>
                 <TextInput
                   style={styles.input}
@@ -234,6 +234,9 @@ const styles = StyleSheet.create({
     top: 8,
     right: 37,
   },
+  body:{
+    backgroundColor: 'rgb(217, 53, 41)',
+  }
 });
 
 

@@ -1,9 +1,4 @@
 {
-  "devToolsPort": 19002,
-  "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 18180,
-  "expoServerNgrokUrl": "https://kh-hdt.anonymous.yuni.exp.direct",
-  "packagerNgrokUrl": "https://packager.kh-hdt.anonymous.yuni.exp.direct",
-  "ngrokPid": 8700
+  "packagerPid": 3648
 }
