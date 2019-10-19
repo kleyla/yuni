@@ -3,7 +3,6 @@ import {
   Container,
   Header,
   Title,
-  Content,
   Footer,
   FooterTab,
   Button,
@@ -12,7 +11,6 @@ import {
   Body,
   Text,
   ListItem,
-  Switch,
   View,
   List,
 } from 'native-base';
@@ -26,7 +24,6 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 
-import {Consumer} from '../../../../yuniex/src/Model/VarGlobales';
 import Estilo from '../Style/Estilos';
 
 const {width: WIDTH} = Dimensions.get('window');
@@ -73,39 +70,32 @@ export class HeaderGral extends Component {
 export class HeaderSearch extends Component {
   render() {
     return (
-      <Consumer>
-        {value => (
-          <Header transparent>
-            <Body>
+     
+          <Header style={styles.body}>
+            <Body style={styles.body}>
               <View>
                 <TextInput
                   style={styles.input}
-                  placeholder={'Search'}
-                  // placeholderTextColor={'rgba(255, 255, 255, 0.7)'}
-                  // underLineColorAndr   oid="transparent"
+                  placeholder={'Buscar'}
+              
                 />
                 <TouchableOpacity style={styles.btnEye}>
                   <Icon
                     name={'search1'}
                     size={20}
-                    // color={'rgba(255, 255, 255, 0.7)'}
+              
                     color={'rgba(0, 0, 0, 35)'}
                   />
                 </TouchableOpacity>
               </View>
             </Body>
             <Right>
-              {/* <Button hastext transparent>
-                <Icon name="search1" style={styles.icon} />
-              </Button> */}
-
               <Button hastext transparent onPress={() => this.props.navigation.navigate('Camera')}>
                 <Icon name="camera" style={styles.icon} />
               </Button>
             </Right>
-          </Header>
-        )}
-      </Consumer>
+            </Header>
+      
     );
   }
 }
@@ -220,7 +210,7 @@ export class SideBar extends Component {
 const styles = StyleSheet.create({
   icon: {
     fontSize: 20,
-    color: 'black',
+    color: 'white',
   },
   iconSearch: {
     position: 'absolute',
@@ -244,6 +234,9 @@ const styles = StyleSheet.create({
     top: 8,
     right: 37,
   },
+  body:{
+    backgroundColor: 'rgb(217, 53, 41)',
+  }
 });
 
 

@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
+
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 
 //VarGlobales
 // import { Provider } from './src/Model/VarGlobales'
 
 //Modulos
+<<<<<<< HEAD
 import Hola from "./src/View/screens/Hola";
 import Tienda from "./src/View/screens/Tienda/Tienda";
 import Carrito from './src/View/screens/Usuario/Carrito'
@@ -35,11 +36,24 @@ const AppNavigator = createStackNavigator(
     Carrito: { screen: Carrito },
     Hola: { screen: Hola },
     // SignUp: { screen: SignUp },
+=======
+
+import WelcomeStack from './src/View/screens/LogIn'
+
+import TabNavigator from './src/View/screens/Home.js';
+const AppNavigator =createSwitchNavigator(
+  {
+    AuthLoading: WelcomeStack,
+    App: TabNavigator,
+
+
+
+>>>>>>> a6e77ebb145899e2e28efa4c0e2b8bac4ed17d81
   },
   {
-    defaultNavigationOptions: { header: null }
+    initialRouteName: 'AuthLoading',
   }
-);
+)
 
 const AppContainer = createAppContainer(AppNavigator);
 

@@ -13,7 +13,8 @@ import Icon from "react-native-vector-icons/Ionicons";
 import Muro from "../Tienda/MuroTienda";
 import Productos from "../Tienda/ProductosTienda";
 
-export default class Tienda extends Component {
+export default class Perfil extends Component {
+
   render() {
     const name = "Karen";
     const likes = 300;
@@ -48,16 +49,19 @@ export default class Tienda extends Component {
           {/* TABS */}
           {/* <Tabs>
           <Tab
+
           heading={
             <TabHeading style={styles.tab}>
             <Icon name="ios-heart-empty" />
             <Text>Mi Muro</Text>
             </TabHeading>
           }
+
           >
           <Muro />
           </Tab>
           <Tab
+
           heading={
             <TabHeading style={styles.tab}>
             <Text>Productos</Text>
@@ -80,6 +84,9 @@ const styles = StyleSheet.create({
     backgroundColor: "lightgray",
     // flexWrap: "wrap"
     paddingTop: 25
+  },
+  text:{
+    color: "white"
   },
   artistBox: {
     backgroundColor: "white",
@@ -118,7 +125,7 @@ const styles = StyleSheet.create({
   },
   //TAB ESTILOS
   tab: {
-    color: "gray",
-    backgroundColor: "gray"
+  
+    backgroundColor: "rgb(217, 53, 41)"
   }
 });

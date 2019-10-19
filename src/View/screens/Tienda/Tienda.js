@@ -7,6 +7,11 @@ import MuroTienda from "./MuroTienda";
 import ProductosTienda from "./ProductosTienda";
 
 export default class Tienda extends Component {
+  static navigationOptions  = ({ navigation }) => {
+    return{
+      title: navigation.getParam('name', 'NO-ID')
+    } 
+  };
   render() {
     const name = "Tienda Cute";
     const likes = 300;
